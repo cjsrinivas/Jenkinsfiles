@@ -1,5 +1,6 @@
 #!groovy
-library 'global-shared-libs'
+@Library('global-shared-libs') _
+//library 'global-shared-libs'
 
 node
 {
