@@ -1,1 +1,17 @@
-echo 'New Testapp Dev'
+#!groovy
+library 'global-shared-libs'
+
+node
+{
+    stage('Build and Test NewApp WAR')
+    {
+        // pull and build the latest code
+        BuildManager.buildAndTestWar(this);
+    }
+
+    stage('Push NewApp WAR to Repository')
+    {
+        // Push the WAR file to the repository
+        BuildManager.pushWarToRepo(this);
+    }
+}
