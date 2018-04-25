@@ -3,6 +3,7 @@ library 'global-shared-libs'
 
 node
 {
+    echo sh(returnStdout: true, script: 'env')
     stage('Deploy Container to Production')
     {
         // Use the container image and push to production
