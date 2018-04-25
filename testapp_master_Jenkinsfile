@@ -6,6 +6,6 @@ node
     stage('Deploy Container to Production')
     {
         // Use the container image and push to production
-        BuildManager.buildAndDeployContainer();
+        BuildManager.buildAndDeployContainer(this);
     }
 }
