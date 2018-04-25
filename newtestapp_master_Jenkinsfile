@@ -1,1 +1,11 @@
-echo 'New Testapp Master'
+#!groovy
+library 'global-shared-libs'
+
+node
+{
+    stage('Deploy NewApp WAR to Application Server')
+    {
+        // pull and build the latest code
+        BuildManager.deployWarToAppServer(this);
+    }
+}
